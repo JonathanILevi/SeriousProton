@@ -103,11 +103,11 @@ void InputHandler::handleEvent(sf::Event& event)
 	}
     else if (event.type == sf::Event::TextEntered && event.text.unicode > 31 && event.text.unicode < 128)
     {
-        if (last_key_press.code != sf::Keyboard::Unknown)
-        {
+        ////if (last_key_press.code != sf::Keyboard::Unknown)
+        ////{
             fireKeyEvent(last_key_press, event.text.unicode);
             last_key_press.code = sf::Keyboard::Unknown;
-        }
+        ////}
     }
     else if (event.type == sf::Event::MouseWheelMoved)
         mouse_wheel_delta += event.mouseWheel.delta;
